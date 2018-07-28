@@ -18,7 +18,7 @@ io.on("connection", function(socket){
     if(data.message=='1')
     {
       console.log("tin hieu khan cap");
-      io.sockets.emit("ssc","1");
+      io.sockets.emit("ssc","on");
       
     }
 
