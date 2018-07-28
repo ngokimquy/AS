@@ -1,6 +1,10 @@
 <html>
 <head>
 <title>Demo Socket IO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="jquery.js"></script>
 <script src="socket.io/socket.io.js"></script>
 <script>
@@ -10,18 +14,90 @@ var socket = io("http://localhost:8080");
 
 $(document).ready(function(){
   //alert("hello jquery");
+
+$("#btn1").click(function()
+{
+$("#btn1").addClass("btn btn-danger btn-lg");
+
+
+})
+
 });
 </script>
 </head>
 
 <body>
-
-
-
-
-
-
-
+  <div class="container">
+    <h2> SERCURITY MONITORING SYSTEM </h2>
+    <h2> LINHTRUNG APARTMENT</h2>
+<div style="padding-top: 50px;">
   
+
+            <div style="padding-bottom: 35px">
+
+
+            <button type="button" class="btn btn-success btn-lg" id="btn1">P.101</button>
+            <button type="button" class="btn btn-success btn-lg">P.102</button>
+            <button type="button" class="btn btn-success btn-lg">P.103</button>
+            <button type="button" class="btn btn-success btn-lg">P.104</button>
+            <button type="button" class="btn btn-success btn-lg">P.105</button>
+            <button type="button" class="btn btn-success btn-lg">P.106</button>
+            <button type="button" class="btn btn-success btn-lg">P.107</button>
+            <button type="button" class="btn btn-success btn-lg">P.108</button>
+            <button type="button" class="btn btn-success btn-lg">P.109</button>
+       
+            
+              
+            </div> 
+
+            <div style="padding-bottom: 35px">
+
+
+              <button type="button" class="btn btn-success btn-lg">P.201</button>
+            <button type="button" class="btn btn-success btn-lg">P.202</button>
+            <button type="button" class="btn btn-success btn-lg">P.203</button>
+            <button type="button" class="btn btn-success btn-lg">P.204</button>
+            <button type="button" class="btn btn-success btn-lg">P.205</button>
+            <button type="button" class="btn btn-success btn-lg">P.206</button>
+            <button type="button" class="btn btn-success btn-lg">P.207</button>
+            <button type="button" class="btn btn-success btn-lg">P.208</button>
+            <button type="button" class="btn btn-success btn-lg">P.209</button>
+              
+                
+              </div>
+
+              <div style="padding-bottom: 35px">
+
+
+
+                <button type="button" class="btn btn-success btn-lg">P.301</button>
+                <button type="button" class="btn btn-success btn-lg">P.302</button>
+                <button type="button" class="btn btn-success btn-lg">P.303</button>
+                <button type="button" class="btn btn-success btn-lg">P.304</button>
+                <button type="button" class="btn btn-success btn-lg">P.305</button>
+                <button type="button" class="btn btn-success btn-lg">P.306</button>
+                <button type="button" class="btn btn-success btn-lg">P.307</button>
+                <button type="button" class="btn btn-success btn-lg">P.308</button>
+                <button type="button" class="btn btn-success btn-lg">P.309</button>
+                
+                  
+                </div>
+
+           
+            
+              </div>   
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
 </body>
 </html>
