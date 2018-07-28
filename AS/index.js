@@ -21,11 +21,13 @@ io.on("connection", function(socket){
   socket.on("disconnect", function(){
     console.log(socket.id + " ngat ket noi!!!!!");
   });
-
+/*
   setInterval(function(){
     socket.emit("ssc","oke");
 
   },3000)
+
+ */ 
 
 });
 
