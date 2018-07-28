@@ -12,7 +12,7 @@ io.on("connection", function(socket){
 
   console.log("Co nguoi ket noi:" + socket.id);
 
-  socket.on("atime",function(data)
+  socket.on("khancap",function(data)
   {
     console.log(data.message);
     if(data.message=='1')
