@@ -6,7 +6,7 @@ const char* ssid = "Tang 1";          //Tên mạng Wifi mà Socket server của
 const char* password = "sese0407";  //Pass mạng wifi ahihi, anh em rãnh thì share pass cho mình với.
  
 char host[] = "34.230.77.115";  //Địa chỉ IP dịch vụ, hãy thay đổi nó theo địa chỉ IP Socket server của bạn.
-int port = 8080;                  //Cổng dịch vụ socket server do chúng ta tạo!
+int port = 3000;                  //Cổng dịch vụ socket server do chúng ta tạo!
  
 //từ khóa extern: dùng để #include các biến toàn cục ở một số thư viện khác. Trong thư viện SocketIOClient có hai biến toàn cục
 // mà chúng ta cần quan tâm đó là
@@ -25,6 +25,7 @@ void setup()
     //Bật baudrate ở mức 115200 để giao tiếp với máy tính qua Serial
     Serial.begin(115200);
     delay(10);
+     pinMode(LED_BUILTIN, OUTPUT);
  
     //Việc đầu tiên cần làm là kết nối vào mạng Wifi
     Serial.print("Ket noi vao mang ");

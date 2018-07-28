@@ -18,7 +18,8 @@ io.on("connection", function(socket){
     if(data.message=='1')
     {
       console.log("tin hieu khan cap");
-      socket.emit("ssc","sangden");
+      io.sockets.emit("ssc","sangden");
+      
     }
 
   })
