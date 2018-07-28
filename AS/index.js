@@ -16,6 +16,11 @@ io.on("connection", function(socket){
     console.log(socket.id + " ngat ket noi!!!!!");
   });
 
+  setInterval(function(){
+    socket.emit("ssc","oke");
+
+  },3000)
+
 });
 
 
