@@ -28,7 +28,11 @@ $("#btn1").addClass("btn btn-danger btn-lg");
 socket.on("ssc",function(data){
 console.log(data);
 $("#btn1").addClass("btn btn-danger btn-lg");
-$("#btn1").fadeOut(1000).fadeIn(1000);
+setInterval(function(){
+  $("#btn1").fadeOut(1000).fadeIn(1000);
+
+},5000)
+
 
 })
 
