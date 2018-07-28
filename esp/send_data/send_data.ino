@@ -65,6 +65,8 @@ void loop()
 if(digitalRead(2)==0)
 {delay(10);
   Serial.println("da co data");
+   client.send("khancap", "message", "1");
+
   while(digitalRead(2)==0);
   }
 

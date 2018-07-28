@@ -15,6 +15,11 @@ io.on("connection", function(socket){
   socket.on("atime",function(data)
   {
     console.log(data.message);
+    if(data.message=='1')
+    {
+      console.log("tin hieu khan cap");
+      socket.emit("ssc","sangden");
+    }
 
   })
 
