@@ -14,7 +14,7 @@ io.on("connection", function(socket){
 
   socket.on("atime",function(data)
   {
-    console.log(data);
+    console.log(data.message);
 
   })
 
