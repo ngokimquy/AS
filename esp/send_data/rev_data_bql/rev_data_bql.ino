@@ -70,7 +70,7 @@ void loop()
         Serial.println(RID);
         Serial.println(Rfull);
         Serial.println(Rfull[1]);
-        if(Rfull[1]=='1')
+        if(Rfull[1]=='o')
              digitalWrite(LED_BUILTIN, LOW); 
 
     }
