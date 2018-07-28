@@ -25,6 +25,8 @@ void setup()
     //Bật baudrate ở mức 115200 để giao tiếp với máy tính qua Serial
     Serial.begin(115200);
     delay(10);
+    pinMode(2,INPUT_PULLUP);
+    
  
     //Việc đầu tiên cần làm là kết nối vào mạng Wifi
     Serial.print("Ket noi vao mang ");
@@ -59,6 +61,14 @@ void setup()
 void loop()
 {
     //tạo một task cứ sau "interval" giây thì chạy lệnh:
+
+if(digitalRead(2)==0)
+{delay(10);
+  Serial.println("da co data");
+  while(digitalRead(2)==0);
+  }
+
+    /*
     if (millis() - previousMillis > interval) {
         //lệnh:
         previousMillis = millis();
@@ -66,6 +76,7 @@ void loop()
         //gửi sự kiện "atime" là một JSON chứa tham số message có nội dung là Time please?
         client.send("atime", "message", "Time please?");
     }
+    */
  
     //Khi bắt được bất kỳ sự kiện nào thì chúng ta có hai tham số:
     //  +RID: Tên sự kiện
