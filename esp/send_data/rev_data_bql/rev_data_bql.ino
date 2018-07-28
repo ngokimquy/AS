@@ -26,6 +26,7 @@ void setup()
     Serial.begin(115200);
     delay(10);
      pinMode(LED_BUILTIN, OUTPUT);
+     digitalWrite(LED_BUILTIN, HIGH); 
  
     //Việc đầu tiên cần làm là kết nối vào mạng Wifi
     Serial.print("Ket noi vao mang ");
@@ -68,6 +69,10 @@ void loop()
     if (client.monitor()) {
         Serial.println(RID);
         Serial.println(Rfull);
+        Serial.println(Rfull[1]);
+        if(Rfull[1]=='1')
+             digitalWrite(LED_BUILTIN, LOW); 
+
     }
  
     //Kết nối lại!
