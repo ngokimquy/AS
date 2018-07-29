@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js">
-       </script>
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-       <script>
-            var socket = io("http://52.90.24.18:2999");
-            $(document).ready(function()
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"> 
+</script>
 
-            {
-                $("#btn1").click(function()
-                {
-                    socket.emit("csends","hello server");
-                })
+<script>
+    var socket = io("http://52.90.24.18:2999");
+$(document).ready(function()
+{
+$("#myaudio").autoplay;
 
+$("#btn1").click(function()
+{
+    socket.emit("csends","hello");
+})
 
+socket.on("ssc",function(data)
 
-            })
+{
 
-       </script>
-    </head>
-    <body>
-    <h1>hello world</h1>
-    <button type="" id="btn1"> click here </button>
-    </body>
+console.log(data);
+$("#btn1").css("background-color","red");
+setInterval(function(){
+  $("#btn1").fadeOut(200).fadeIn(200);
+
+},500)
+
+})
+
+})
+</script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Emergency switch</h2>
+ <div style="padding-top:100px;padding-left:65px;" >
+  <button type="square" id="btn1" style="width:150px; height: 150px; border-radius: 50%; background-color:#4286f4 " >XSmall</button>
+  </div>
+</div>
+
+<audio id="myaudio" controls autoplay>
+    
+    <source src="baodong.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+
+</body>
 </html>
