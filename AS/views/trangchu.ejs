@@ -33,12 +33,23 @@ $("#btn1").addClass("btn btn-danger btn-lg");
 
 socket.on("ssc",function(data){
 console.log(data);
+if(data == "on1")
+{
 $("#btn1").addClass("btn btn-danger btn-lg");
 setInterval(function(){
   $("#btn1").fadeOut(200).fadeIn(200);
 
 },500)
+}
 
+if(data == "on2")
+{
+$("#btn2").addClass("btn btn-danger btn-lg");
+setInterval(function(){
+  $("#btn2").fadeOut(200).fadeIn(200);
+
+},500)
+}
 
 })
 
@@ -57,7 +68,7 @@ setInterval(function(){
 
 
             <button type="button" class="btn btn-success btn-lg" id="btn1">P.101</button>
-            <button type="button" class="btn btn-success btn-lg">P.102</button>
+            <button type="button" class="btn btn-success btn-lg" id="btn2">P.102</button>
             <button type="button" class="btn btn-success btn-lg">P.103</button>
             <button type="button" class="btn btn-success btn-lg">P.104</button>
             <button type="button" class="btn btn-success btn-lg">P.105</button>
