@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js">
+       </script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script>
+            var socket = io("http://52.90.24.18:2999");
+            $(document).ready(function()
+
+            {
+                $("#btn1").click(function()
+                {
+                    socket.emit("csends","hello server");
+                })
+
+
+
+            })
+
+       </script>
+    </head>
+    <body>
+    <h1>hello world</h1>
+    <button type="" id="btn1"> click here </button>
+    </body>
+</html>
