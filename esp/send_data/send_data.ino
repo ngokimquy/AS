@@ -67,7 +67,7 @@ if(digitalRead(2)==0)
   Serial.println("da co data");
    client.send("khancap", "message", "1");
 
-  while(digitalRead(2)==0);
+ 
   }
 
     /*
