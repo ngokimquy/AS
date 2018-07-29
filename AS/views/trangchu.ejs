@@ -15,6 +15,12 @@ var socket = io("http://52.90.24.18:2999");
 $(document).ready(function(){
   //alert("hello jquery");
 
+$("#btnring").click(function()
+{
+socket.emit("tatchuong","f");
+
+})
+
 $("#btn1").click(function()
 {
 $("#btn1").addClass("btn btn-danger btn-lg");
@@ -100,7 +106,7 @@ setInterval(function(){
 
 
 
-                  <button type="button" class="btn btn-default btn-lg">TURN OFF RING</button>
+                  <button type="button" class="btn btn-default btn-lg" id="btnring">TURN OFF RING</button>
                  
                   
                     

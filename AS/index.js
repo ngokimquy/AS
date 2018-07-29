@@ -24,12 +24,23 @@ io.on("connection", function(socket){
     if(data.message=='1')
     {
       console.log("tin hieu khan cap");
-      io.sockets.emit("ssc","on");
+      io.sockets.emit("ssc","on1");
+      
+    }
+    if(data.message=='2')
+    {
+      console.log("tin hieu khan cap");
+      io.sockets.emit("ssc","on2");
       
     }
 
   })
 
+  socket.on("tatchuong",function(data)
+  {
+    io.sockets.emit("tatchuong",data);
+
+  })
   socket.on("disconnect", function(){
     console.log(socket.id + " ngat ket noi!!!!!");
   });
