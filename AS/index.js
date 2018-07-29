@@ -38,6 +38,7 @@ io.on("connection", function(socket){
 
   socket.on("tatchuong",function(data)
   {
+    console.log(data);
     io.sockets.emit("tatchuong",data);
 
   })
