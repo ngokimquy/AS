@@ -6,7 +6,7 @@ app.set("views", "./views");
 
 var server = require("http").Server(app);
 var io = require("socket.io")(server);
-server.listen(2999);
+server.listen(2998);
 
 io.on("connection", function(socket){
 
